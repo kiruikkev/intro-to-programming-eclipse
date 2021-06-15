@@ -9,7 +9,7 @@ console.log(copyright);
 copyright.innerHTML = `Kelvin kirui &copy; ${thisyear}`;
 footer.appendChild(copyright);
 const skills = [
-    'Java script', 'HTML', 'Linux', 'Windows'
+    'Java script', 'HTML', 'Linux', 'Windows', 'CSS', 'Active Directory Management', 'cloud services',
 ];
 const skillsSection = document.getElementById("skills");
 const skillsList = skillsSection.querySelector('ul');

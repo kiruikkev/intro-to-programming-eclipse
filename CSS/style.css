@@ -1,0 +1,97 @@
+    img-size {
+        width: 2em;
+        height: 2em;
+    }
+    
+    body {
+        background-color: darksalmon;
+        color: black
+    }
+    
+    body h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    section {
+        padding: 10px;
+        border: 1px solid rgb(173, 114, 114);
+    }
+    
+    h1 {
+        font-size: larger;
+        color: blue;
+        font-weight: 600;
+    }
+    
+    @media only screen and(max-width:812px) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        h1 {
+            font-size: larger;
+            color: blue;
+            font-weight: 60%;
+        }
+    }
+    
+    h2 {
+        font-size: larger;
+        color: blue;
+        font-weight: 400;
+    }
+    
+    @media only screen and(max-width:812px) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        h2 {
+            font-size: larger;
+            color: blue;
+            font-weight: 40%;
+        }
+    }
+    
+    .Experience li {
+        list-style: block;
+    }
+    
+    #skills ul {
+        list-style: block;
+    }
+    
+    #leave_message label {
+        font-size: medium;
+        color: chartreuse;
+    }
+    
+    #leave_message input {
+        font-size: medium;
+        color: rgb(90, 77, 77);
+        padding: 2px;
+        border: 1px;
+    }
+    
+    #leave_message textarea {
+        font-size: larger;
+        color: firebrick;
+        padding: 3px;
+        border: 5px;
+    }
+    
+    form {
+        padding: 10px;
+    }
+    
+    form button {
+        padding: 2px;
+        background-color: lemonchiffon;
+        border: 1px;
+    }
+    
+    #messages ul {
+        list-style: block;
+    }
+    
+    #messages button {
+        padding: 5px;
+        background-color: darkred;
+    }
+    
+    footer {
+        padding: 10px;
+        background-color: darkslategrey;
+    }
