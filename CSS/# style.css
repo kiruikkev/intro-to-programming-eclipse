@@ -34,7 +34,7 @@
         h2 {
             font-size: larger;
             color: blue;
-            font-weight: 400;
+            font-weight: 300;
         }
         
         @media only screen and(max-width:812px) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
