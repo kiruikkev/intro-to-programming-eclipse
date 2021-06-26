@@ -4,7 +4,7 @@
     }
     
     body {
-        background-color: darksalmon;
+        background-color: rgb(199, 194, 193);
         color: black
     }
     
@@ -13,7 +13,7 @@
     }
     
     section {
-        padding: 10px;
+        padding: 20px;
         border: 1px solid rgb(173, 114, 114);
     }
     
@@ -25,15 +25,15 @@
     
     @media only screen and(max-width:812px) and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
         h1 {
-            font-size: larger;
-            color: blue;
+            font-size: small;
+            color: rgba(75, 75, 161, 0.486);
             font-weight: 60%;
         }
     }
     
     h2 {
-        font-size: larger;
-        color: blue;
+        font-size: medium;
+        color: rgb(85, 85, 112);
         font-weight: 400;
     }
     
@@ -94,4 +94,10 @@
     footer {
         padding: 10px;
         background-color: darkslategrey;
+    }
+    
+    .myName {
+        font-style: italic;
+        font-display: large;
+        color: navy;
     }
