@@ -12,7 +12,7 @@ const skills = [
     'Java script', 'HTML', 'Linux', 'Windows'
 ];
 const skillsSection = document.getElementById("skills");
-const skillsList = skillsSection.querySelector('ul');
+const skillsList = skillsSection.querySelector("ul");
 console.log(skills);
 for (let i = 0; i < skills.length; i++) {
     const skill = document.createElement('li');
@@ -20,10 +20,6 @@ for (let i = 0; i < skills.length; i++) {
     console.log(skill.innerHTML);
     skillsList.appendChild(skill);
 }
-
-
-
-
 const messageForm = document.getElementById('leave_message');
 console.log(messageForm)
 messageForm.addEventListener('submit', (e) => {
@@ -31,12 +27,10 @@ messageForm.addEventListener('submit', (e) => {
     const Name = e.target.name.value;
     const Email = e.target.email.value;
     const Message = e.target.message.value;
-
     console.log(Name, Email, Message);
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-
     newMessage.innerHTML = `<a href="mailto:${Email}">${Name}</a> wrote:<span>${Message}</span>`
     const removeButton = document.createElement('button');
     removeButton.innerHTML = 'remove';
@@ -46,8 +40,6 @@ messageForm.addEventListener('submit', (e) => {
         entry.remove()
     })
     newMessage.appendChild(removeButton);
-
     messageList.appendChild(newMessage);
     messageForm.reset();
-
 });
