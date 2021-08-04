@@ -43,3 +43,20 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
+const githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/kiruikkev/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', (event) => {
+    const repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+
+
+});
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('ul');
+console.log(projectList);
+for (var i = 0; i < projectList.length; i++) {
+    const project = document.createElement('li');
+    project.innerHTML = projectList[i];
+    projectList.appendChild(project);
+}
