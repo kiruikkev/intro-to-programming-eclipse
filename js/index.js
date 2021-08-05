@@ -43,20 +43,15 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
     messageForm.reset();
 });
-const githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/kiruikkev/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', (event) => {
-    const repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
+fetch(`https://api.github.com/users/kiruikkev/repos`)
+    .then(response => response.json())
+    .then(data => repo(data))
 
-
-});
-const projectSection = document.getElementById('projects');
-const projectList = projectSection.querySelector('ul');
-console.log(projectList);
-for (var i = 0; i < projectList.length; i++) {
-    const project = document.createElement('li');
-    project.innerHTML = projectList[i];
-    projectList.appendChild(project);
-}
+function repo(data) {
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector('ul')
+    for (let i = 0; i < data.length; i++) {
+        let project = document.createElement('li');
+        project.innerHTML = `<a href=${`${data[i].clone_url}`}>${data[i].name}</a>`
+        projectList.appendChild(project)
+}}
