@@ -47,8 +47,8 @@ const githubRequest = new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/kiruikkev/repos');
 githubRequest.send();
 
-function handleRepoData(repositories) {
-    let repositories = JSON.parse(this.response);
+function handleRepoData() {
+    const repositories = JSON.parse(this.response);
     console.log(repositories);
     const projectSection = document.getElementById('projects');
     const projectList = projectSection.querySelector('ul');
@@ -57,17 +57,5 @@ function handleRepoData(repositories) {
         const project = document.createElement('li');
         project.innerText = `${repo.name} ${repo.description}`;
         projectList.appendChild(project);
-
     });
-    fetch(`https://api.github.com/users/kiruikkev/repos`)
-        .then(response => response.json())
-        .then(data => repo(data))
-
-    function repo(data) {
-        let projectSection = document.getElementById("projects");
-        let projectList = projectSection.querySelector('ul')
-        for (let i = 0; i < data.length; i++) {
-            let project = document.createElement('li');
-            project.innerHTML = `<a href=${`${data[i].clone_url}`}>${data[i].name}</a>`
-        projectList.appendChild(project)
-}}};
+};
